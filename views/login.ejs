@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<div class="login_container">
+    <form class="login-form" action="/login" method="POST">
+        <h1>Welcome</h1>    
+        <label for="email">Email address</label>
+        <input type="email" name="username" placeholder="Enter Email" class="login_info" id="email" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password" class="login_info" id="password"><br>
+        <button type="submit" id="button">Login</button>
+        <a href="/forgot-password" id="forgot">Forgot Password?</a>
+        <p id="signUp">Don't have an account? <a href="/register">Sign Up</a></p>
+        
+    </form>
+</div>
+<script>
+    document.getElementById("login").setAttribute("hidden", true);
+</script>
+<%- include("partials/footer.ejs") %>
+

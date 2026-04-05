@@ -1,0 +1,32 @@
+<% lost_item_info %>
+<% for (let i = lost_item_info.length - 1; i >= 0; i--) { %>
+<div class="item-card">
+       
+    <div class="item-info">
+        <div class="field-group">
+            <span class="label">Item Name</span>
+            <div class="value"><% const name = lost_item_info[i].item_name %> <%= name %></div>
+        </div>
+
+        <div class="field-group">
+            <span class="label">Item Details</span>
+            <div class="value"><% const itemInfo = lost_item_info[i].item_details %> <%= itemInfo %></div>
+        </div>
+
+        <div class="field-group">
+            <span class="label">Location</span>
+            <div class="value"><% const location = lost_item_info[i].location %> <%= location %></div>
+        </div>
+
+        <div class="field-group">
+            <span class="label">Date</span>
+            <div class="value"><% const date = lost_item_info[i].lost_date %> <%= date  %></div>
+        </div>
+    </div>
+
+    <div class="item-image-box">
+        <span><img src="data:<%= lost_item_info[i].mimetype %>;base64,<%= lost_item_info[i].picture.toString('base64') %>" alt="Lost item" ></span>    
+    </div>
+     
+</div>
+<%   } %>

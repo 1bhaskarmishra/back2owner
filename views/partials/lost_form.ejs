@@ -1,0 +1,36 @@
+
+
+<div id="findPage">
+
+
+    <div class="foundFormContainer">
+        <form action="/lostformsubmit" class="report-form lost-form" method="POST" enctype="multipart/form-data">
+            <h1>Report Lost Item</h1>
+            <div>
+                <label for="nameBox">Item Name</label>
+                <input id="nameBox" type="text" placeholder="Enter item name" name="itemname">
+            </div>
+            <div>
+                <label for="productInfo">Item Description</label>
+                <textarea id="productInfo" placeholder="Describe your lost item..." name="itemdetails"></textarea> 
+            </div>
+            <div>
+                <label for="location">Location</label>
+                <input id="location" type="text" placeholder="Where did you lose it?" name="location">
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input id="date" type="date" name="lostdate">
+            </div>
+            <div>
+                <label for="photo">Upload Photo</label>
+                <input id="photo" type="file" placeholder="Choose File" name="picture">
+            </div>
+            
+            <button id="lost-submit-button">Submit Report</button>
+        </form>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,26 @@
+<div class="footer">
+    <footer>Copyright © <%= new Date().getFullYear() %>
+    </footer>
+</div>
+
+<script>
+
+    function darkMode(){
+        document.querySelector("body").style.backgroundColor="black";
+        document.querySelector("body").style.color="#f2f0e3";
+        document.querySelector(".login-form").style.backgroundColor="#1f1f1f";
+        
+    };
+
+    function lightMode() {
+        document.querySelector("body").style.backgroundColor="#f2f0e3";
+        document.querySelector("body").style.color="black";
+        document.querySelector(".login-form").style.backgroundColor="#adeef8";
+    }
+    
+    document.querySelector(".dark").addEventListener("click", darkMode);
+    document.querySelector(".light").addEventListener("click", lightMode);
+</script>
+
+</body>
+</html>
