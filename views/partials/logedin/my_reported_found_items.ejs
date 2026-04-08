@@ -1,32 +1,49 @@
 <% found_item_info %>
-<% for (let i = found_item_info.length - 1; i >= 0; i--) { %>
-<div class="item-card">
-       
-    <div class="item-info">
-        <div class="field-group">
-            <span class="label">Item Name</span>
-            <div class="value"><% const name = found_item_info[i].item_name %> <%= name %></div>
-        </div>
+    <% for (let i=found_item_info.length - 1; i>= 0; i--) { %>
+        <div class="item-card">
 
-        <div class="field-group">
-            <span class="label">Item Details</span>
-            <div class="value"><% const itemInfo = found_item_info[i].item_details %> <%= itemInfo %></div>
-        </div>
+            <div class="item-info">
+                <div class="option">
+                   
+                </div>
+                <div class="field-group">
+                    <span class="label">Item Name</span>
+                    <div class="value">
+                        <% const name=found_item_info[i].item_name %>
+                            <%= name %>
+                    </div>
+                </div>
 
-        <div class="field-group">
-            <span class="label">Location</span>
-            <div class="value"><% const location = found_item_info[i].location %> <%= location %></div>
-        </div>
+                <div class="field-group">
+                    <span class="label">Item Details</span>
+                    <div class="value">
+                        <% const itemInfo=found_item_info[i].item_details %>
+                            <%= itemInfo %>
+                    </div>
+                </div>
 
-        <div class="field-group">
-            <span class="label">Date</span>
-            <div class="value"><% const date = found_item_info[i].found_date %> <%= date  %></div>
-        </div>
-    </div>
+                <div class="field-group">
+                    <span class="label">Location</span>
+                    <div class="value">
+                        <% const location=found_item_info[i].location %>
+                            <%= location %>
+                    </div>
+                </div>
 
-    <div class="item-image-box">
-        <span><img src="data:<%= found_item_info[i].mimetype %>;base64,<%= found_item_info[i].picture.toString('base64') %>" alt="found item" ></span>    
-    </div>
-     
-</div>
-<%   } %>
+                <div class="field-group">
+                    <span class="label">Date</span>
+                    <div class="value">
+                        <% const date=found_item_info[i].found_date %>
+                            <%= date %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-image-box">
+                <span><img
+                        src="data:<%= found_item_info[i].mimetype %>;base64,<%= found_item_info[i].picture.toString('base64') %>"
+                        alt="found item"></span>
+            </div>
+
+        </div>
+        <% } %>

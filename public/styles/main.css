@@ -37,18 +37,6 @@ li {
     gap: 10px;
 }
     
-/* dark-mode */
-.light-dark-img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-
-.theme-switch {
-    border-radius: 50%;
-    background-color: white;
-    cursor: pointer;
-}
 
 /* login register button */
 .button {
@@ -190,4 +178,49 @@ li {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+
+
+/* RESPONSIVNESS */
+
+@media (max-width: 950px) {
+    * {
+        font-size: 0.7em;
+    }
+    
+    .navbar {
+        
+    }
+    .nav-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position:absolute;
+        z-index: 10;
+        margin: 0;
+        padding: 0;
+        /* background-color: #1f1f1f; */
+
+    }
+
+    .nav-div > ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-register {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .q-img {
+    height: 25vh;
+    }
+}
+
+@media (max-width: 600px) {
+    * {
+        font-size: 0.5em;
+    }
 }
