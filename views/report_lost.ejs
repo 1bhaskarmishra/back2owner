@@ -1,27 +1,13 @@
-<%- include("partials/logedin/header.ejs") %>
-    <div id="dashboard-page-container">
-        <div class="section section1">
-            <%- include ("partials/logedin/nav.ejs") %>
+ <%- include ("partials/dashboard.ejs") %>
+     <main>
+        <div class="container form-container">
+          <%- include ("partials/lost_form.ejs") %>             
         </div>
-
-        <div class="section section2">
-            <%- include("partials/lost_form.ejs") %>
-        </div>
-
-        <div class="section section3">
-            <%- include("partials/logedin/shortinfo.ejs") %>
-        </div>
-
-    </div>
+    </main>
     
-    <div>
-        <%- include("partials/footer.ejs") %>
-    </div>
-
-    <script src="js/shortUserInfo.js"></script>
+    <footer>Copyright © 2026</footer>
     <script>
-        document.getElementById("lost-report-btn").style.backgroundColor = "#0d6efd";
-        document.querySelector("#lost-report-btn a").style.color = "#ffffff";
+        document.getElementById("report-lost").classList.add("active");
     </script>
 
     </body>

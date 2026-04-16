@@ -1,0 +1,122 @@
+:root{
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+    
+}
+/* FOUND AND LOST FORM STYLE */
+
+.foundFormContainer {
+    display: flex;
+    max-width: 550px;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 15px 15px 30px 15px;
+    margin: 10px;
+    background-color: #dddddd;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 20px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.find-form>h1 {
+    text-align: center;
+    color: #3ac43a;
+}
+
+label {
+    color: #0b52b5;
+}
+
+input {
+    padding: 5px;
+    border-color: #0b52b5;
+    border-radius: 5px;
+    height: 30px;
+    color: #11121a;
+}
+
+textarea {
+    height: 100px;
+    border-color: #0b52b5;
+}
+
+#date {
+    width: 160px;
+}
+
+#photo {
+    width: 50%;
+}
+
+#find-submit-button {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+#find-submit-button {
+    background-color: #3ac43a;
+}
+
+#find-submit-button:hover {
+    box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #22a122;
+}
+
+#lost-submit-button {
+    background-color: #f42f2f;
+    width: 200px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
+}
+
+#lost-submit-button:hover {
+    box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.5);
+    background-color: #b22121;
+}
+
+.lost-form>h1 {
+    text-align: center;
+    color: #f42f2f;
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    background-color: #2e2e2e;
+    color: #f2f0e3;
+    border-radius: 8px;
+}
+

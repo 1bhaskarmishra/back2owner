@@ -1,61 +1,22 @@
-
+:root{
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
-    background-color: white;
+    background-color: var(--base-clr);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     font-family: ubuntu, sans-serif;
-}
-
-/* header styles */
-.logo {
-    height: 8vh;
-}
-
-.nav-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 50px;
-}
-
-li {
-    list-style: none;
-    display: inline-block;
-}
-
-.nav-div ul li a {
-    text-decoration: none;
-    font-size: 22px;
-    margin-right: 5vh;
-    color: #1f1f1f;
-}
-
-.login-register{
-    display: flex;
-    gap: 10px;
-}
-    
-
-/* login register button */
-.button {
-    background-color: #0d6efd;
-    border: none;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: #2a44dc;
-    transition: 0.3s;
-}
-
-.button a {
-    text-decoration: none;
-    color: white;
 }
 
 /* footer styles */
@@ -71,23 +32,25 @@ li {
 .login_container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .login-form {
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     justify-content: center;
     border-radius: 5px;
     margin-top: 10vh;
     padding: 20px;
     width: 400px;
+    background-color: #eeeeee;
 }
 
 .login_container .login-form h1 {
     text-align: center;
-
 }
 
 .login_info {
@@ -142,6 +105,8 @@ li {
     align-items: center;
     height: 50vh;
     width: 100%;
+    gap: 10px;
+    color: var(--text-clr);
 }
 
 .main-quote > p {
@@ -162,14 +127,15 @@ li {
 }
 
 .quote {
-    background-color: #0382df;
+    background-color: #0d6efd;
+    color: #e6e6e6;
     box-shadow: 5px 5px 15px -5px #0e6f8d;
     font-size: 1.5em;
     border-radius: 50px;
     text-align: center;
     width: 50%;
     height: 10%;
-    padding: 2%;
+    padding: 1.5%;
     margin: 30px;
 }
 
@@ -184,43 +150,16 @@ li {
 
 /* RESPONSIVNESS */
 
-@media (max-width: 950px) {
-    * {
-        font-size: 0.7em;
-    }
-    
-    .navbar {
-        
-    }
-    .nav-div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position:absolute;
-        z-index: 10;
-        margin: 0;
-        padding: 0;
-        /* background-color: #1f1f1f; */
-
+@media (max-width:910px) {
+    .main-quote > p {
+        font-size: 1.7rem;
     }
 
-    .nav-div > ul{
-        display: flex;
-        flex-direction: column;
+    .quote{
+        font-size: 1rem;
     }
-
-    .login-register {
-        display: flex;
-        flex-direction: column;
-    }
-
     .q-img {
-    height: 25vh;
+        height: 20vh;
     }
 }
 
-@media (max-width: 600px) {
-    * {
-        font-size: 0.5em;
-    }
-}

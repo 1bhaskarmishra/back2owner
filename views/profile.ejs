@@ -1,0 +1,16 @@
+    <%- include ("partials/dashboard.ejs") %>
+     <main>
+        <div class="container">
+            <h2>User Info:</h2><br><hr><br>
+           <div class="profile-container">
+            <h1 class="user-name"><%= username.name %></h1>
+            <a href="#" class="user-email"><%= username.username %></a>
+    </div>       
+        </div>
+    </main>
+    <footer>Copyright © 2026</footer>
+    <script>
+        document.getElementById("profile").classList.add("active");
+    </script>
+</body>
+</html>

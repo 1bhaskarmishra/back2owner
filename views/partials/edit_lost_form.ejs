@@ -4,19 +4,19 @@
 
 
     <div class="foundFormContainer">
-        <form action="/lostformsubmit" class="report-form lost-form" method="POST" enctype="multipart/form-data">
+        <form action="/lostformedit/<%= item.id %>" class="report-form lost-form" method="POST" enctype="multipart/form-data">
             <h1>Report Lost Item</h1>
             <div>
                 <label for="nameBox">Item Name</label>
-                <input id="nameBox" type="text" placeholder="Enter item name" name="itemname" required>
+                <input id="nameBox" type="text" placeholder="Enter item name" name="itemname" value="<%= item.item_name %>" required>
             </div>
             <div>
                 <label for="productInfo">Item Description</label>
-                <textarea id="productInfo" placeholder="Describe your lost item and your contact details..." name="itemdetails" required></textarea> 
+                <textarea id="productInfo" placeholder="Describe your lost item and your contact details..." name="itemdetails" required><%= item.item_details %></textarea> 
             </div>
             <div>
                 <label for="location">Location</label>
-                <input id="location" type="text" placeholder="Where did you lose it?" name="location" required>
+                <input id="location" type="text" placeholder="Where did you lose it?" name="location" value="<%= item.location %>" required>
             </div>
             <div>
                 <label for="date">Date</label>
@@ -27,7 +27,7 @@
                 <input id="photo" type="file" placeholder="Choose File" name="picture" required>
             </div>
             
-            <button id="lost-submit-button">Submit Report</button>
+            <button id="lost-submit-button">Save Changes</button>
         </form>
 
     </div>

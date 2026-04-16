@@ -1,0 +1,32 @@
+<div id="findPage">
+    <div class="foundFormContainer">
+        <form action="/findformedit/<%= item.id %>" class="report-form find-form" method="POST" enctype="multipart/form-data">
+            <h1>Report Found Item</h1>
+            <div>
+                <label for="nameBox">Item Name</label>
+                <input id="nameBox" type="text" placeholder="Enter item name" name="itemname" value="<%= item.item_name %>" required>
+            </div>
+            <div>
+                <label for="productInfo">Item Description</label>
+                <textarea id="productInfo" placeholder="Describe the item you found and your contact info..." name="itemdetails" required><%= item.item_details %></textarea> 
+            </div>
+            <div>
+                <label for="location">Location</label>
+                <input id="location" type="text" placeholder="Where did you find it?" name="location" value="<%= item.location %>" required>
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input id="date" type="date" name="finddate" value="<%= item.found_date %>" required>
+            </div>
+            <div>
+                <label for="photo">Upload Photo</label>
+                <input id="photo" type="file" placeholder="Choose File" name="picture" required>
+            </div>
+            
+            <button id="find-submit-button">Save Changes</button>
+        </form>
+
+    </div>
+
+
+</div>
