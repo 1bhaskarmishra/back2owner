@@ -41,7 +41,6 @@ const db = new pg.Client({
     port: process.env.PG_PORT,
     ssl: {
         rejectUnauthorized: process.env.PG_UNAUTHORIZE,
-        ca: process.env.PG_CA,
     }
 });
 
@@ -256,7 +255,7 @@ app.get("/browse-lost", async(req, res) =>{
 
 app.get("/browse-found", async(req, res) =>{
     try {
-        const result = await db.query("SELECT users.name, found_items.id, found_items.user_id, found_items.item_name, found_items.item_details, found_items.location, found_items.foun d_date, found_items.picture, found_items.mimetype FROM users INNER JOIN found_items ON users.id = found_items.user_id");
+        const result = await db.query("SELECT users.name, found_items.id, found_items.user_id, found_items.item_name, found_items.item_details, found_items.location, found_items.found_date, found_items.picture, found_items.mimetype FROM users INNER JOIN found_items ON users.id = found_items.user_id");
         const details = result.rows;
         res.render("browse_found.ejs", { found_item_info: details });
     }catch(err) {
